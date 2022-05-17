@@ -61,13 +61,6 @@ export const login = async (req, res, next) => {
   }
 };
 
-export const logout = async (req, res, next) => {
-  return res.json({
-    auth: false,
-    token: "",
-  });
-};
-
 export const register = async (req, res, next) => {
   const findEmail = `SELECT * FROM user WHERE user_email = ?`;
   try {
